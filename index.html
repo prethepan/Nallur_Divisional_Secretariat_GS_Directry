@@ -43,11 +43,12 @@
         .action-cell { display: flex; gap: 5px; justify-content: center; }
         .action-col { display: none; } 
         
-        .backup-section { background-color: #f8f9fa; padding: 15px; border: 1px solid #e9ecef; border-radius: 4px; margin-bottom: 20px; display: flex; gap: 15px; align-items: center; }
+        .backup-section { background-color: #f8f9fa; padding: 15px; border: 1px solid #e9ecef; border-radius: 4px; margin-bottom: 20px; display: flex; gap: 15px; align-items: center; flex-wrap: wrap; }
         .modal { display: none; position: fixed; z-index: 100; left: 0; top: 0; width: 100%; height: 100%; background-color: rgba(0,0,0,0.4); }
         .modal-content { background-color: #fff; margin: 15% auto; padding: 20px; border: 1px solid #888; width: 300px; border-radius: 5px; text-align: center; }
         
         .archive-section { margin-top: 40px; background: #fff5f5; border: 1px solid #fab0b0; padding: 15px; border-radius: 6px; }
+        .github-config-panel { background-color: #eff6ff; border: 1px solid #bfdbfe; padding: 15px; border-radius: 6px; margin-bottom: 20px; }
     </style>
 </head>
 <body>
@@ -72,9 +73,33 @@
 
         <div id="statusAlert" class="status-message sr-only" aria-live="polite"></div>
 
+        <section id="githubConfigSection" class="github-config-panel admin-controls" aria-label="GitHub API Sync Configuration">
+            <h3>GitHub Cloud Sync Settings</h3>
+            <div class="form-grid">
+                <div class="form-group">
+                    <label for="ghToken">GitHub Personal Access Token (PAT)</label>
+                    <input type="password" id="ghToken" placeholder="ghp_xxxxxxxxxxxxxxxxxxxx">
+                </div>
+                <div class="form-group">
+                    <label for="ghOwner">GitHub Username / Owner</label>
+                    <input type="text" id="ghOwner" placeholder="e.g., your-github-username">
+                </div>
+                <div class="form-group">
+                    <label for="ghRepo">Repository Name</label>
+                    <input type="text" id="ghRepo" placeholder="e.g., nallur-ds-directory">
+                </div>
+                <div class="form-group">
+                    <label for="ghBranch">Branch</label>
+                    <input type="text" id="ghBranch" value="main" placeholder="main">
+                </div>
+            </div>
+            <button id="saveGhConfigBtn" style="background-color: #28a745;">Save & Initialize Cloud Connection</button>
+            <button id="fetchGhDataBtn" style="background-color: #6f42c1;">Force Fetch from GitHub</button>
+        </section>
+
         <section id="adminBackupSection" class="backup-section admin-controls" aria-label="Backup and Data Transfer">
             <div>
-                <strong>Transfer Data:</strong>
+                <strong>Transfer Data Locally:</strong>
                 <button id="exportBtn" class="btn-backup">Save Data to PC (.json)</button>
             </div>
             <div>
@@ -276,6 +301,7 @@
         let isAdmin = false;
         let gsRecords = [];
         let deletedRecordsLog = [];
+        let currentFileSha = null; // Stores GitHub file SHA payload to authorize updates
 
         // Live Clock Tick Function
         function updateClock() {
@@ -309,15 +335,36 @@
         const modalSubmitBtn = document.getElementById('modalSubmitBtn');
         const modalCancelBtn = document.getElementById('modalCancelBtn');
 
+        // GitHub Cache Form elements
+        const ghTokenInput = document.getElementById('ghToken');
+        const ghOwnerInput = document.getElementById('ghOwner');
+        const ghRepoInput = document.getElementById('ghRepo');
+        const ghBranchInput = document.getElementById('ghBranch');
+        const saveGhConfigBtn = document.getElementById('saveGhConfigBtn');
+        const fetchGhDataBtn = document.getElementById('fetchGhDataBtn');
+
         async function initData() {
-            const localData = localStorage.getItem('gsRecords_v2');
+            // Load GitHub configurations if they exist
+            ghTokenInput.value = localStorage.getItem('gh_token') || '';
+            ghOwnerInput.value = localStorage.getItem('gh_owner') || '';
+            ghRepoInput.value = localStorage.getItem('gh_repo') || '';
+            ghBranchInput.value = localStorage.getItem('gh_branch') || 'main';
+
             const localArchive = localStorage.getItem('gsArchive_v2');
-            
             if (localArchive) {
                 deletedRecordsLog = JSON.parse(localArchive);
                 renderArchiveTable();
             }
 
+            // Attempt to fetch from GitHub first if settings exist, otherwise fallback to local storage
+            if (ghTokenInput.value && ghOwnerInput.value && ghRepoInput.value) {
+                announceToScreenReader("Connecting to GitHub database...");
+                const fetchedSuccess = await fetchFromGitHub();
+                if (fetchedSuccess) return; 
+            }
+
+            // Local storage fallback
+            const localData = localStorage.getItem('gsRecords_v2');
             if (localData) {
                 gsRecords = JSON.parse(localData);
                 sortRecords();
@@ -337,6 +384,113 @@
             }
         }
 
+        // GitHub API: Fetch Data
+        async function fetchFromGitHub() {
+            const token = ghTokenInput.value.trim();
+            const owner = ghOwnerInput.value.trim();
+            const repo = ghRepoInput.value.trim();
+            const branch = ghBranchInput.value.trim() || 'main';
+            const filename = "gs_directory_backup.json";
+
+            if (!token || !owner || !repo) return false;
+
+            const url = `https://api.github.com/repos/${owner}/${repo}/contents/${filename}?ref=${branch}`;
+            
+            try {
+                const response = await fetch(url, {
+                    headers: { "Authorization": `token ${token}` }
+                });
+
+                if (response.status === 404) {
+                    announceToScreenReader("Notice: 'gs_directory_backup.json' not found on GitHub. A new one will be created on your next save.", true);
+                    currentFileSha = null;
+                    return false;
+                }
+
+                if (!response.ok) throw new Error("API Connection Error");
+
+                const data = await response.json();
+                currentFileSha = data.sha; // Save current SHA hash code for editing authorization
+
+                // Decode base64 content safely dealing with UTF-8
+                const decodedContent = decodeURIComponent(atob(data.content).split('').map(function(c) {
+                    return '%' + ('00' + c.charCodeAt(0).toString(16)).slice(-2);
+                }).join(''));
+
+                const parsedRecords = JSON.parse(decodedContent);
+                if (Array.isArray(parsedRecords)) {
+                    gsRecords = parsedRecords;
+                    localStorage.setItem('gsRecords_v2', JSON.stringify(gsRecords)); // Keep local synchronized
+                    sortRecords();
+                    renderTable();
+                    announceToScreenReader("Successfully synchronized data from GitHub Cloud.");
+                    return true;
+                }
+            } catch (err) {
+                announceToScreenReader("Cloud Fetch Failed. Visualizing system local data backup instead.", true);
+                console.error(err);
+                return false;
+            }
+            return false;
+        }
+
+        // GitHub API: Save Data
+        async function saveToGitHub() {
+            const token = ghTokenInput.value.trim();
+            const owner = ghOwnerInput.value.trim();
+            const repo = ghRepoInput.value.trim();
+            const branch = ghBranchInput.value.trim() || 'main';
+            const filename = "gs_directory_backup.json";
+
+            if (!token || !owner || !repo) return;
+
+            // Fetch latest SHA right before saving to avoid collision overwrites
+            const url = `https://api.github.com/repos/${owner}/${repo}/contents/${filename}?ref=${branch}`;
+            try {
+                const checkRes = await fetch(url, { headers: { "Authorization": `token ${token}` } });
+                if (checkRes.ok) {
+                    const checkData = await checkRes.json();
+                    currentFileSha = checkData.sha;
+                }
+            } catch(e) { console.log("Pre-fetch SHA generation omitted.") }
+
+            // Encode content to Base64 cleanly addressing UTF-8 symbols
+            const rawJsonString = JSON.stringify(gsRecords, null, 2);
+            const base64Content = btoa(encodeURIComponent(rawJsonString).replace(/%([0-9A-F]{2})/g, function(match, p1) {
+                return String.fromCharCode('0x' + p1);
+            }));
+
+            const bodyPayload = {
+                message: `Update directory database metrics - ${new Date().toLocaleString()}`,
+                content: base64Content,
+                branch: branch
+            };
+            if (currentFileSha) bodyPayload.sha = currentFileSha;
+
+            try {
+                const putResponse = await fetch(`https://api.github.com/repos/${owner}/${repo}/contents/${filename}`, {
+                    method: "PUT",
+                    headers: {
+                        "Authorization": `token ${token}`,
+                        "Content-Type": "application/json"
+                    },
+                    body: JSON.stringify(bodyPayload)
+                });
+
+                if (putResponse.ok) {
+                    const resData = await putResponse.json();
+                    currentFileSha = resData.content.sha; // Capture updated block SHA
+                    announceToScreenReader("Cloud Storage Saved: GitHub file updated successfully.");
+                } else {
+                    const errorDetails = await putResponse.json();
+                    throw new Error(errorDetails.message || "PUT Error Request");
+                }
+            } catch(err) {
+                announceToScreenReader("Error: Failed to back up data directly to GitHub. Saved locally.", true);
+                console.error(err);
+            }
+        }
+
         function sortRecords() {
             gsRecords.sort((a, b) => a.division.localeCompare(b.division, undefined, { numeric: true, sensitivity: 'base' }));
         }
@@ -345,7 +499,23 @@
             sortRecords();
             localStorage.setItem('gsRecords_v2', JSON.stringify(gsRecords));
             localStorage.setItem('gsArchive_v2', JSON.stringify(deletedRecordsLog));
+            // Automatically push data updates into GitHub as well
+            saveToGitHub();
         }
+
+        // Save explicit configurations setup manually
+        saveGhConfigBtn.addEventListener('click', () => {
+            localStorage.setItem('gh_token', ghTokenInput.value.trim());
+            localStorage.setItem('gh_owner', ghOwnerInput.value.trim());
+            localStorage.setItem('gh_repo', ghRepoInput.value.trim());
+            localStorage.setItem('gh_branch', ghBranchInput.value.trim() || 'main');
+            announceToScreenReader("GitHub cloud sync configurations saved locally.");
+            fetchFromGitHub();
+        });
+
+        fetchGhDataBtn.addEventListener('click', () => {
+            fetchFromGitHub();
+        });
 
         function renderTable(data = gsRecords) {
             tableBody.innerHTML = '';
@@ -444,7 +614,10 @@
             const actionHeaders = document.querySelectorAll('.action-col');
             
             adminControls.forEach(el => el.style.display = enable ? 'block' : 'none');
-            if(enable) document.getElementById('adminBackupSection').style.display = 'flex';
+            if(enable) {
+                document.getElementById('adminBackupSection').style.display = 'flex';
+                document.getElementById('githubConfigSection').style.display = 'block';
+            }
             
             actionHeaders.forEach(el => el.style.display = enable ? 'table-cell' : 'none');
             adminLoginBtn.style.display = enable ? 'none' : 'inline-block';
