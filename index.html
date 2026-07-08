@@ -31,8 +31,17 @@
     </style>
 </head>
 <body>
+<header id="top">
+   <a href="#main">Skip to main content</a>
+   <br/>
+   <a href="index.html">
+    <img alt="Logo" src="logo.png" width="150"/>
+   </a>
+   <p>Divisional Secretariat Nallur</p>
+   <div id="clockDisplay" class="clock-display" aria-live="off">Loading Date & Time...</div>
+</header>
 
-    <main>
+    <main id="main">
         <h1>Welcome to Nallur Divisional Secretariat Grama Niladhari (GS) Directory</h1>
 
         <div id="statusAlert" class="status-message sr-only" aria-live="polite"></div>
@@ -397,5 +406,13 @@
         // Initialize application from data sources
         initData();
     </script>
+
+    <footer>
+    <p>© 2026 Nallur Divisional Secretariat</p>
+    
+    <a href="#top">Scroll to Top</a>
+</footer>
+
 </body>
+
 </html>
