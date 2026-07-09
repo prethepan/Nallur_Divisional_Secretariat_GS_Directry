@@ -265,9 +265,55 @@
             </section>
         </div>
 
+        <section class="archive-section" aria-labelledby="archive-heading">
+            <h2 id="archive-heading">Deleted Records Audit History Log</h2>
+            <div class="table-container">
+                <table style="min-width: 600px;">
+                    <thead>
+                        <tr>
+                            <th>GS Div No.</th>
+                            <th>GS Name</th>
+                            <th>Location</th>
+                            <th>Date & Time Deleted</th>
+                        </tr>
+                    </thead>
+                    <tbody id="archiveTableBody">
+                        <tr><td colspan="4" style="text-align:center; color:#6c757d;">No deleted records tracked in this session yet.</td></tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
     </main>
+<div id="pwdModal" class="modal">
+        <div class="modal-content">
+            <h3>Admin Access Required</h3>
+            <div class="form-group">
+                <input type="password" id="adminPwdInput" placeholder="Enter Admin Password">
+            </div>
+            <button id="modalSubmitBtn">Login</button>
+            <button id="modalCancelBtn" class="btn-cancel">Cancel</button>
+        </div>
+    </div>
 
     <script>
+        const ADMIN_PASSWORD = "Nallur1822";
+        let isAdmin = false;
+        let gsRecords = [];
+        let deletedRecordsLog = [];
+
+        // Live Clock Tick Function
+        function updateClock() {
+            const now = new Date();
+            document.getElementById('clockDisplay').textContent = "Current Server Time: " + now.toLocaleString();
+        }
+        setInterval(updateClock, 1000);
+        updateClock();
+
+        // DOM Element Cache Map
+        const gsForm = document.getElementById('gsForm');
+        const submitFormBtn = document.getElementById('submitFormBtn');
+        
         // Array placeholder
         let gsRecords = [];
 
