@@ -7,21 +7,35 @@
     "mobile": "0773385594",
     "isActing": false,
     "totalFamilies": 748,
-    "welfareBeneficiaries": 377,
-    "eldersPayment": 0,
-    "disabilityPayment": 0
+    "maleMembers": 1207,
+    "femaleMembers": 1360,
+    "totalMembers": 2567,
+    "welfarePhase1": 299,
+    "welfarePhase2": 78,
+    "totalWelfare": 377,
+    "eldersPayment": 5,
+    "disabilityPayment": 43,
+    "kidneyPayment": 2,
+    "lastUpdated": "7/13/2026"
   },
   {
     "id": 1782354519439,
-    "name": "Regan",
+    "name": "Mr. Putpasingham Regan",
     "division": "J90",
     "place": "Ariyalai East",
     "mobile": "0779103538",
     "isActing": false,
     "totalFamilies": 576,
-    "welfareBeneficiaries": 257,
-    "eldersPayment": 0,
-    "disabilityPayment": 0
+    "maleMembers": 935,
+    "femaleMembers": 968,
+    "totalMembers": 1903,
+    "welfarePhase1": 229,
+    "welfarePhase2": 28,
+    "totalWelfare": 257,
+    "eldersPayment": 5,
+    "disabilityPayment": 22,
+    "kidneyPayment": 1,
+    "lastUpdated": "7/13/2026"
   },
   {
     "id": 1782361654295,
@@ -31,9 +45,16 @@
     "mobile": "0779566082",
     "isActing": false,
     "totalFamilies": 667,
-    "welfareBeneficiaries": 73,
-    "eldersPayment": 0,
-    "disabilityPayment": 0
+    "maleMembers": 958,
+    "femaleMembers": 982,
+    "totalMembers": 1940,
+    "welfarePhase1": 60,
+    "welfarePhase2": 13,
+    "totalWelfare": 73,
+    "eldersPayment": 3,
+    "disabilityPayment": 9,
+    "kidneyPayment": 0,
+    "lastUpdated": "7/13/2026"
   },
   {
     "id": 1782362636989,
@@ -43,9 +64,16 @@
     "mobile": "0774561367",
     "isActing": false,
     "totalFamilies": 539,
-    "welfareBeneficiaries": 35,
-    "eldersPayment": 0,
-    "disabilityPayment": 0
+    "maleMembers": 721,
+    "femaleMembers": 816,
+    "totalMembers": 1537,
+    "welfarePhase1": 23,
+    "welfarePhase2": 12,
+    "totalWelfare": 35,
+    "eldersPayment": 18,
+    "disabilityPayment": 8,
+    "kidneyPayment": 1,
+    "lastUpdated": "7/13/2026"
   },
   {
     "id": 1782363439719,
@@ -55,21 +83,35 @@
     "mobile": "0770417229",
     "isActing": true,
     "totalFamilies": 393,
-    "welfareBeneficiaries": 58,
-    "eldersPayment": 0,
-    "disabilityPayment": 0
+    "maleMembers": 527,
+    "femaleMembers": 591,
+    "totalMembers": 1118,
+    "welfarePhase1": 47,
+    "welfarePhase2": 11,
+    "totalWelfare": 58,
+    "eldersPayment": 11,
+    "disabilityPayment": 9,
+    "kidneyPayment": 0,
+    "lastUpdated": "7/13/2026"
   },
   {
     "id": 1782368114738,
     "name": "Mrs. Valarmathy Goripalan",
     "division": "J94",
-    "place": "Ariyalai Centeral North",
+    "place": "Ariyalai Central North",
     "mobile": "0778939276",
     "isActing": false,
     "totalFamilies": 393,
-    "welfareBeneficiaries": 79,
-    "eldersPayment": 0,
-    "disabilityPayment": 0
+    "maleMembers": 525,
+    "femaleMembers": 542,
+    "totalMembers": 1067,
+    "welfarePhase1": 70,
+    "welfarePhase2": 9,
+    "totalWelfare": 79,
+    "eldersPayment": 7,
+    "disabilityPayment": 13,
+    "kidneyPayment": 0,
+    "lastUpdated": "7/13/2026"
   },
   {
     "id": 1782369173962,
@@ -79,9 +121,16 @@
     "mobile": "0740408732",
     "isActing": false,
     "totalFamilies": 534,
-    "welfareBeneficiaries": 100,
-    "eldersPayment": 0,
-    "disabilityPayment": 0
+    "maleMembers": 706,
+    "femaleMembers": 790,
+    "totalMembers": 1496,
+    "welfarePhase1": 87,
+    "welfarePhase2": 13,
+    "totalWelfare": 100,
+    "eldersPayment": 16,
+    "disabilityPayment": 18,
+    "kidneyPayment": 0,
+    "lastUpdated": "7/13/2026"
   },
   {
     "id": 1782369290929,
@@ -91,9 +140,16 @@
     "mobile": "0760217585",
     "isActing": false,
     "totalFamilies": 420,
-    "welfareBeneficiaries": 112,
-    "eldersPayment": 0,
-    "disabilityPayment": 0
+    "maleMembers": 533,
+    "femaleMembers": 601,
+    "totalMembers": 1134,
+    "welfarePhase1": 90,
+    "welfarePhase2": 22,
+    "totalWelfare": 112,
+    "eldersPayment": 14,
+    "disabilityPayment": 20,
+    "kidneyPayment": 1,
+    "lastUpdated": "7/13/2026"
   },
   {
     "id": 1782369402733,
@@ -103,9 +159,16 @@
     "mobile": "0779231875",
     "isActing": false,
     "totalFamilies": 538,
-    "welfareBeneficiaries": 66,
+    "maleMembers": 810,
+    "femaleMembers": 7897,
+    "totalMembers": 1597,
+    "welfarePhase1": 0,
+    "welfarePhase2": 0,
+    "totalWelfare": 0,
     "eldersPayment": 0,
-    "disabilityPayment": 0
+    "disabilityPayment": 0,
+    "kidneyPayment": 0,
+    "lastUpdated": "7/13/2026"
   },
   {
     "id": 1782369485694,
@@ -115,9 +178,16 @@
     "mobile": "0762401969",
     "isActing": false,
     "totalFamilies": 669,
-    "welfareBeneficiaries": 107,
+    "maleMembers": 929,
+    "femaleMembers": 1117,
+    "totalMembers": 2046,
+    "welfarePhase1": 0,
+    "welfarePhase2": 0,
+    "totalWelfare": 0,
     "eldersPayment": 0,
-    "disabilityPayment": 0
+    "disabilityPayment": 0,
+    "kidneyPayment": 0,
+    "lastUpdated": "7/13/2026"
   },
   {
     "id": 1782369574978,
@@ -127,9 +197,16 @@
     "mobile": "0772892903",
     "isActing": false,
     "totalFamilies": 868,
-    "welfareBeneficiaries": 205,
+    "maleMembers": 1347,
+    "femaleMembers": 1325,
+    "totalMembers": 2672,
+    "welfarePhase1": 0,
+    "welfarePhase2": 0,
+    "totalWelfare": 0,
     "eldersPayment": 0,
-    "disabilityPayment": 0
+    "disabilityPayment": 0,
+    "kidneyPayment": 0,
+    "lastUpdated": "7/13/2026"
   },
   {
     "id": 1782369657386,
@@ -139,9 +216,16 @@
     "mobile": "0772892903",
     "isActing": true,
     "totalFamilies": 631,
-    "welfareBeneficiaries": 88,
+    "maleMembers": 914,
+    "femaleMembers": 919,
+    "totalMembers": 1833,
+    "welfarePhase1": 0,
+    "welfarePhase2": 0,
+    "totalWelfare": 0,
     "eldersPayment": 0,
-    "disabilityPayment": 0
+    "disabilityPayment": 0,
+    "kidneyPayment": 0,
+    "lastUpdated": "7/13/2026"
   },
   {
     "id": 1782369737687,
@@ -151,9 +235,16 @@
     "mobile": "0772470566",
     "isActing": false,
     "totalFamilies": 462,
-    "welfareBeneficiaries": 62,
+    "maleMembers": 664,
+    "femaleMembers": 683,
+    "totalMembers": 1347,
+    "welfarePhase1": 0,
+    "welfarePhase2": 0,
+    "totalWelfare": 0,
     "eldersPayment": 0,
-    "disabilityPayment": 0
+    "disabilityPayment": 0,
+    "kidneyPayment": 0,
+    "lastUpdated": "7/13/2026"
   },
   {
     "id": 1782369816152,
@@ -163,9 +254,16 @@
     "mobile": "0774747055",
     "isActing": false,
     "totalFamilies": 504,
-    "welfareBeneficiaries": 75,
+    "maleMembers": 718,
+    "femaleMembers": 743,
+    "totalMembers": 1461,
+    "welfarePhase1": 0,
+    "welfarePhase2": 0,
+    "totalWelfare": 0,
     "eldersPayment": 0,
-    "disabilityPayment": 0
+    "disabilityPayment": 0,
+    "kidneyPayment": 0,
+    "lastUpdated": "7/13/2026"
   },
   {
     "id": 1782369901562,
@@ -175,9 +273,16 @@
     "mobile": "0770417229",
     "isActing": false,
     "totalFamilies": 875,
-    "welfareBeneficiaries": 142,
+    "maleMembers": 1158,
+    "femaleMembers": 1298,
+    "totalMembers": 2456,
+    "welfarePhase1": 0,
+    "welfarePhase2": 0,
+    "totalWelfare": 0,
     "eldersPayment": 0,
-    "disabilityPayment": 0
+    "disabilityPayment": 0,
+    "kidneyPayment": 0,
+    "lastUpdated": "7/13/2026"
   },
   {
     "id": 1782369994245,
@@ -187,9 +292,16 @@
     "mobile": "0776657038",
     "isActing": false,
     "totalFamilies": 406,
-    "welfareBeneficiaries": 33,
+    "maleMembers": 552,
+    "femaleMembers": 600,
+    "totalMembers": 1152,
+    "welfarePhase1": 0,
+    "welfarePhase2": 0,
+    "totalWelfare": 0,
     "eldersPayment": 0,
-    "disabilityPayment": 0
+    "disabilityPayment": 0,
+    "kidneyPayment": 0,
+    "lastUpdated": "7/13/2026"
   },
   {
     "id": 1782370137009,
@@ -199,9 +311,16 @@
     "mobile": "0773912405",
     "isActing": false,
     "totalFamilies": 399,
-    "welfareBeneficiaries": 25,
+    "maleMembers": 535,
+    "femaleMembers": 589,
+    "totalMembers": 1124,
+    "welfarePhase1": 0,
+    "welfarePhase2": 0,
+    "totalWelfare": 0,
     "eldersPayment": 0,
-    "disabilityPayment": 0
+    "disabilityPayment": 0,
+    "kidneyPayment": 0,
+    "lastUpdated": "7/13/2026"
   },
   {
     "id": 1782370242498,
@@ -211,9 +330,16 @@
     "mobile": "0776657038",
     "isActing": true,
     "totalFamilies": 591,
-    "welfareBeneficiaries": 77,
+    "maleMembers": 824,
+    "femaleMembers": 842,
+    "totalMembers": 1666,
+    "welfarePhase1": 0,
+    "welfarePhase2": 0,
+    "totalWelfare": 0,
     "eldersPayment": 0,
-    "disabilityPayment": 0
+    "disabilityPayment": 0,
+    "kidneyPayment": 0,
+    "lastUpdated": "7/13/2026"
   },
   {
     "id": 1782370319730,
@@ -223,9 +349,16 @@
     "mobile": "0779103538",
     "isActing": true,
     "totalFamilies": 232,
-    "welfareBeneficiaries": 35,
+    "maleMembers": 288,
+    "femaleMembers": 322,
+    "totalMembers": 610,
+    "welfarePhase1": 0,
+    "welfarePhase2": 0,
+    "totalWelfare": 0,
     "eldersPayment": 0,
-    "disabilityPayment": 0
+    "disabilityPayment": 0,
+    "kidneyPayment": 0,
+    "lastUpdated": "7/13/2026"
   },
   {
     "id": 1782370420876,
@@ -235,9 +368,16 @@
     "mobile": "0777464205",
     "isActing": false,
     "totalFamilies": 486,
-    "welfareBeneficiaries": 61,
+    "maleMembers": 614,
+    "femaleMembers": 686,
+    "totalMembers": 1300,
+    "welfarePhase1": 0,
+    "welfarePhase2": 0,
+    "totalWelfare": 0,
     "eldersPayment": 0,
-    "disabilityPayment": 0
+    "disabilityPayment": 0,
+    "kidneyPayment": 0,
+    "lastUpdated": "7/13/2026"
   },
   {
     "id": 1782370543888,
@@ -247,9 +387,16 @@
     "mobile": "0779132083",
     "isActing": false,
     "totalFamilies": 1396,
-    "welfareBeneficiaries": 206,
+    "maleMembers": 1994,
+    "femaleMembers": 2012,
+    "totalMembers": 4106,
+    "welfarePhase1": 0,
+    "welfarePhase2": 0,
+    "totalWelfare": 0,
     "eldersPayment": 0,
-    "disabilityPayment": 0
+    "disabilityPayment": 0,
+    "kidneyPayment": 0,
+    "lastUpdated": "7/13/2026"
   },
   {
     "id": 1782374859632,
@@ -259,9 +406,16 @@
     "mobile": "0773779981",
     "isActing": false,
     "totalFamilies": 930,
-    "welfareBeneficiaries": 134,
+    "maleMembers": 1383,
+    "femaleMembers": 1502,
+    "totalMembers": 2885,
+    "welfarePhase1": 0,
+    "welfarePhase2": 0,
+    "totalWelfare": 0,
     "eldersPayment": 0,
-    "disabilityPayment": 0
+    "disabilityPayment": 0,
+    "kidneyPayment": 0,
+    "lastUpdated": "7/13/2026"
   },
   {
     "id": 1782374951918,
@@ -271,9 +425,16 @@
     "mobile": "0777464205",
     "isActing": true,
     "totalFamilies": 292,
-    "welfareBeneficiaries": 35,
+    "maleMembers": 402,
+    "femaleMembers": 405,
+    "totalMembers": 807,
+    "welfarePhase1": 0,
+    "welfarePhase2": 0,
+    "totalWelfare": 0,
     "eldersPayment": 0,
-    "disabilityPayment": 0
+    "disabilityPayment": 0,
+    "kidneyPayment": 0,
+    "lastUpdated": "7/13/2026"
   },
   {
     "id": 1782375014959,
@@ -283,9 +444,16 @@
     "mobile": "0775220355",
     "isActing": false,
     "totalFamilies": 409,
-    "welfareBeneficiaries": 45,
+    "maleMembers": 522,
+    "femaleMembers": 578,
+    "totalMembers": 1100,
+    "welfarePhase1": 0,
+    "welfarePhase2": 0,
+    "totalWelfare": 0,
     "eldersPayment": 0,
-    "disabilityPayment": 0
+    "disabilityPayment": 0,
+    "kidneyPayment": 0,
+    "lastUpdated": "7/13/2026"
   },
   {
     "id": 1782375066616,
@@ -295,9 +463,16 @@
     "mobile": "0750499739",
     "isActing": false,
     "totalFamilies": 620,
-    "welfareBeneficiaries": 68,
+    "maleMembers": 850,
+    "femaleMembers": 926,
+    "totalMembers": 1776,
+    "welfarePhase1": 0,
+    "welfarePhase2": 0,
+    "totalWelfare": 0,
     "eldersPayment": 0,
-    "disabilityPayment": 0
+    "disabilityPayment": 0,
+    "kidneyPayment": 0,
+    "lastUpdated": "7/13/2026"
   },
   {
     "id": 1782375151931,
@@ -307,9 +482,16 @@
     "mobile": "0751894970",
     "isActing": false,
     "totalFamilies": 1185,
-    "welfareBeneficiaries": 238,
+    "maleMembers": 1777,
+    "femaleMembers": 1821,
+    "totalMembers": 3598,
+    "welfarePhase1": 0,
+    "welfarePhase2": 0,
+    "totalWelfare": 0,
     "eldersPayment": 0,
-    "disabilityPayment": 0
+    "disabilityPayment": 0,
+    "kidneyPayment": 0,
+    "lastUpdated": "7/13/2026"
   },
   {
     "id": 1782375246890,
@@ -319,9 +501,16 @@
     "mobile": "0776468307",
     "isActing": false,
     "totalFamilies": 606,
-    "welfareBeneficiaries": 99,
+    "maleMembers": 835,
+    "femaleMembers": 877,
+    "totalMembers": 1712,
+    "welfarePhase1": 0,
+    "welfarePhase2": 0,
+    "totalWelfare": 0,
     "eldersPayment": 0,
-    "disabilityPayment": 0
+    "disabilityPayment": 0,
+    "kidneyPayment": 0,
+    "lastUpdated": "7/13/2026"
   },
   {
     "id": 1782375330887,
@@ -331,9 +520,16 @@
     "mobile": "0779352639",
     "isActing": false,
     "totalFamilies": 630,
-    "welfareBeneficiaries": 85,
+    "maleMembers": 894,
+    "femaleMembers": 919,
+    "totalMembers": 1813,
+    "welfarePhase1": 0,
+    "welfarePhase2": 0,
+    "totalWelfare": 0,
     "eldersPayment": 0,
-    "disabilityPayment": 0
+    "disabilityPayment": 0,
+    "kidneyPayment": 0,
+    "lastUpdated": "7/13/2026"
   },
   {
     "id": 1782375392288,
@@ -343,9 +539,16 @@
     "mobile": "0773590394",
     "isActing": false,
     "totalFamilies": 336,
-    "welfareBeneficiaries": 65,
+    "maleMembers": 478,
+    "femaleMembers": 522,
+    "totalMembers": 1000,
+    "welfarePhase1": 0,
+    "welfarePhase2": 0,
+    "totalWelfare": 0,
     "eldersPayment": 0,
-    "disabilityPayment": 0
+    "disabilityPayment": 0,
+    "kidneyPayment": 0,
+    "lastUpdated": "7/13/2026"
   },
   {
     "id": 1782375445464,
@@ -355,9 +558,16 @@
     "mobile": "0776733675",
     "isActing": false,
     "totalFamilies": 749,
-    "welfareBeneficiaries": 185,
+    "maleMembers": 1092,
+    "femaleMembers": 1156,
+    "totalMembers": 2248,
+    "welfarePhase1": 0,
+    "welfarePhase2": 0,
+    "totalWelfare": 0,
     "eldersPayment": 0,
-    "disabilityPayment": 0
+    "disabilityPayment": 0,
+    "kidneyPayment": 0,
+    "lastUpdated": "7/13/2026"
   },
   {
     "id": 1782375509173,
@@ -367,9 +577,16 @@
     "mobile": "0775611984",
     "isActing": false,
     "totalFamilies": 786,
-    "welfareBeneficiaries": 132,
+    "maleMembers": 1129,
+    "femaleMembers": 1204,
+    "totalMembers": 2333,
+    "welfarePhase1": 0,
+    "welfarePhase2": 0,
+    "totalWelfare": 0,
     "eldersPayment": 0,
-    "disabilityPayment": 0
+    "disabilityPayment": 0,
+    "kidneyPayment": 0,
+    "lastUpdated": "7/13/2026"
   },
   {
     "id": 1782375557446,
@@ -379,9 +596,16 @@
     "mobile": "0779186353",
     "isActing": false,
     "totalFamilies": 503,
-    "welfareBeneficiaries": 124,
+    "maleMembers": 783,
+    "femaleMembers": 752,
+    "totalMembers": 1535,
+    "welfarePhase1": 0,
+    "welfarePhase2": 0,
+    "totalWelfare": 0,
     "eldersPayment": 0,
-    "disabilityPayment": 0
+    "disabilityPayment": 0,
+    "kidneyPayment": 0,
+    "lastUpdated": "7/13/2026"
   },
   {
     "id": 1782375616707,
@@ -391,9 +615,16 @@
     "mobile": "0779177296",
     "isActing": false,
     "totalFamilies": 607,
-    "welfareBeneficiaries": 43,
+    "maleMembers": 947,
+    "femaleMembers": 919,
+    "totalMembers": 1866,
+    "welfarePhase1": 0,
+    "welfarePhase2": 0,
+    "totalWelfare": 0,
     "eldersPayment": 0,
-    "disabilityPayment": 0
+    "disabilityPayment": 0,
+    "kidneyPayment": 0,
+    "lastUpdated": "7/13/2026"
   },
   {
     "id": 1782375715176,
@@ -403,9 +634,16 @@
     "mobile": "0775143836",
     "isActing": false,
     "totalFamilies": 814,
-    "welfareBeneficiaries": 131,
+    "maleMembers": 1123,
+    "femaleMembers": 1230,
+    "totalMembers": 2353,
+    "welfarePhase1": 0,
+    "welfarePhase2": 0,
+    "totalWelfare": 0,
     "eldersPayment": 0,
-    "disabilityPayment": 0
+    "disabilityPayment": 0,
+    "kidneyPayment": 0,
+    "lastUpdated": "7/13/2026"
   },
   {
     "id": 1782375821362,
@@ -415,9 +653,16 @@
     "mobile": "0775143836",
     "isActing": true,
     "totalFamilies": 529,
-    "welfareBeneficiaries": 44,
+    "maleMembers": 723,
+    "femaleMembers": 752,
+    "totalMembers": 1475,
+    "welfarePhase1": 0,
+    "welfarePhase2": 0,
+    "totalWelfare": 0,
     "eldersPayment": 0,
-    "disabilityPayment": 0
+    "disabilityPayment": 0,
+    "kidneyPayment": 0,
+    "lastUpdated": "7/13/2026"
   },
   {
     "id": 1782375871061,
@@ -427,9 +672,16 @@
     "mobile": "0778925845",
     "isActing": false,
     "totalFamilies": 282,
-    "welfareBeneficiaries": 37,
+    "maleMembers": 401,
+    "femaleMembers": 419,
+    "totalMembers": 820,
+    "welfarePhase1": 0,
+    "welfarePhase2": 0,
+    "totalWelfare": 0,
     "eldersPayment": 0,
-    "disabilityPayment": 0
+    "disabilityPayment": 0,
+    "kidneyPayment": 0,
+    "lastUpdated": "7/13/2026"
   },
   {
     "id": 1782375958772,
@@ -439,9 +691,16 @@
     "mobile": "0766006274",
     "isActing": false,
     "totalFamilies": 376,
-    "welfareBeneficiaries": 70,
+    "maleMembers": 564,
+    "femaleMembers": 570,
+    "totalMembers": 1134,
+    "welfarePhase1": 0,
+    "welfarePhase2": 0,
+    "totalWelfare": 0,
     "eldersPayment": 0,
-    "disabilityPayment": 0
+    "disabilityPayment": 0,
+    "kidneyPayment": 0,
+    "lastUpdated": "7/13/2026"
   },
   {
     "id": 1782376047276,
@@ -451,21 +710,35 @@
     "mobile": "0776468307",
     "isActing": true,
     "totalFamilies": 538,
-    "welfareBeneficiaries": 104,
+    "maleMembers": 730,
+    "femaleMembers": 780,
+    "totalMembers": 1510,
+    "welfarePhase1": 0,
+    "welfarePhase2": 0,
+    "totalWelfare": 0,
     "eldersPayment": 0,
-    "disabilityPayment": 0
+    "disabilityPayment": 0,
+    "kidneyPayment": 0,
+    "lastUpdated": "7/13/2026"
   },
   {
-    "id": 1782376093262,
+    "id": 1783938584535,
     "name": "Mrs. Balarama Rajanikanth",
     "division": "J127",
     "place": "Kokkuvil South West",
     "mobile": "0771516555",
     "isActing": false,
     "totalFamilies": 433,
-    "welfareBeneficiaries": 119,
+    "maleMembers": 658,
+    "femaleMembers": 660,
+    "totalMembers": 1318,
+    "welfarePhase1": 0,
+    "welfarePhase2": 0,
+    "totalWelfare": 119,
     "eldersPayment": 0,
-    "disabilityPayment": 0
+    "disabilityPayment": 0,
+    "kidneyPayment": 0,
+    "lastUpdated": "7/13/2026"
   },
   {
     "id": 1782376214957,
@@ -475,8 +748,15 @@
     "mobile": "0784206549",
     "isActing": false,
     "totalFamilies": 553,
-    "welfareBeneficiaries": 55,
+    "maleMembers": 782,
+    "femaleMembers": 857,
+    "totalMembers": 1639,
+    "welfarePhase1": 0,
+    "welfarePhase2": 0,
+    "totalWelfare": 0,
     "eldersPayment": 0,
-    "disabilityPayment": 0
+    "disabilityPayment": 0,
+    "kidneyPayment": 0,
+    "lastUpdated": "7/13/2026"
   }
 ]
